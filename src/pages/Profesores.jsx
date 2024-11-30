@@ -1,27 +1,10 @@
 import { useForm } from "react-hook-form";
 
-/* const Profesores = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({
-    defaultValues: {
-        names: "Calos Jose",
-        lastnames: "Perez Garcia",
-        phone: "04121234567",
-        addres: "Calle universidad, 123, 28001",
-        title: "Doctorado en ciencias de computación",
-        especiality: "Inteligencia Artificial"
-    }
-  }); */
-
   const Profesores = () => {
     const {
       register,
       handleSubmit,
       formState: { errors },
-      setValue,  
     } = useForm({
       defaultValues: {
         names: "Calos Jose",
@@ -35,11 +18,7 @@ import { useForm } from "react-hook-form";
       }
     });
 
-  const submit = (data) => {
-    for (const key in data) {
-        setValue(key, data[key]);
-    }
-
+  const submit = () => {
     alert('Datos actualizados');
 
   };
@@ -71,6 +50,7 @@ import { useForm } from "react-hook-form";
             />
 
             <div>{errors.names && <span>{errors.names.message}</span>}</div>
+          
           </div>
 
           <div className="data">

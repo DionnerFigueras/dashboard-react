@@ -1,11 +1,11 @@
-const UserPhoto = ({ url }) => {
+const UserPhoto = ({ url, name }) => {
     
     return(
         <div className="userphoto">
             <div className="container">
             <img src={url} alt="User " className="userImg" />
             </div>
-            <p className="adminName">Admin name</p>
+            <p className="adminName">{name}</p>
         </div>
     )
 }
